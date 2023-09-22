@@ -8,7 +8,36 @@
     padding: 0;
     box-sizing: border-box;
 }
+::-webkit-scrollbar {
+    display: none;
+}
+#scrollToTopButton {
+    position: fixed;
+    bottom: 15px;
+    right: 8px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #81bcfb;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+}
+#scrollToTopButton:hover{
+    background-color: #238dff;
+}
 
+#progressIndicator {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: #007bff;
+    z-index: 9999;
+    display: none; /* Initially hide the progress indicator */
+}
 body {
     background-color: var(--white);
 }
