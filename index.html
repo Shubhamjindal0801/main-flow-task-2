@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Let's Code</h1>
+        <h1 id="header-content">Let's Code</h1>
     </header>
     
     <nav>
@@ -22,13 +22,13 @@
     </nav>
 
     <div class="content">
-        <h2 >The Evolution and Impact of Computer Programming: A Comprehensive Exploration</h2>
+        <h2 style="text-align: center;">The Evolution and Impact of Computer Programming: A Comprehensive Exploration</h2>
         <br>
         <br>
         <div class="image">
-         <img src="https://media.tenor.com/I3RjM4xQO0kAAAAi/monitors-typing.gif" style="display: block;" alt="">  
-         <img src="https://media.tenor.com/-6m2vqRjKDEAAAAi/geek-girl.gif" style="display: none;" alt="">
-         <img src="https://i.pinimg.com/originals/75/8f/1c/758f1cd8cede9c3e4711306fc030f4ce.gif" style="display: none;" alt="">
+         <img draggable="false" src="https://media.tenor.com/I3RjM4xQO0kAAAAi/monitors-typing.gif" width='200px' height='200px' style="display: block;" alt="">  
+         <img draggable="false" src="https://media.tenor.com/-6m2vqRjKDEAAAAi/geek-girl.gif" height='200px' width='200px' style="display: none;" alt="">
+         <img draggable="false" src="https://i.pinimg.com/originals/75/8f/1c/758f1cd8cede9c3e4711306fc030f4ce.gif" height='200px' width='200px' style="display: none;" alt="">
         </div>
         <div style="margin-top: 2rem;">
           <p>Computer programming is a pivotal aspect of the modern world, underpinning nearly every facet of our daily lives. From smartphones and social media to spacecraft and scientific research, computer programming forms the backbone of technological advancement. This comprehensive essay delves into the multifaceted world of computer programming, tracing its evolution, exploring its various paradigms and languages, and assessing its profound impact on society.</p> 
@@ -129,7 +129,7 @@
 
 <p>In the words of Alan Perlis, the first recipient of the Turing Award, "<b>A language that doesn't affect the way you think about programming is not worth knowing.</b>" Computer programming not only empowers us to solve problems but also influences the way we approach challenges in all aspects of life.</p><br><br>
 
-<hr>
+
 
 <p>This essay provides an in-depth exploration of computer programming, from its historical roots to its impact on society and future trends. Computer programming is a dynamic field that continues to evolve, shaping the world and offering endless opportunities for innovation and problem-solving.</p>
 
@@ -141,9 +141,9 @@
         &copy; 2023 Let's Code
     </footer>
     <form id="contactForm" class="contact-form">
-      <input type="text" placeholder="Enter your name here" id="name" name="name" required />
-      <input type="email" placeholder="Enter Your email here" id="email" name="email" required/>
-      <textarea id="message" placeholder="Enter your message here" name="message" rows="4" required></textarea>
+      <input type="text"  oninvalid="this.setCustomValidity('Please Enter Your Name')" oninput="setCustomValidity('')" placeholder="Enter your name here" id="name" name="name" required />
+      <input type="email"  oninvalid="this.setCustomValidity('Please Enter valid email')" oninput="setCustomValidity('')" placeholder="Enter Your email here" id="email" name="email" required/>
+      <textarea id="message"  oninvalid="this.setCustomValidity('Please Enter some message to communicate easily.')" oninput="setCustomValidity('')" placeholder="Enter your message here" name="message" rows="4" required></textarea>
       <button type="submit">Submit</button>
     </form>
     <script>
@@ -168,7 +168,20 @@
             currentIndex = (currentIndex + 1) % images.length;
             images[currentIndex].style.display = 'block';
         }
-        setInterval(nextImage, 3000);
+        setInterval(nextImage, 2500);
+        const headerContent = document.getElementById('header-content')
+        let theme = 'light'
+        headerContent.addEventListener('click',()=>{
+          if(theme == 'light'){
+            document.body.style.backgroundColor = 'black'
+            document.body.style.color = 'white'
+            theme = 'dark'
+          }else if(theme == 'dark'){
+            document.body.style.backgroundColor = 'white'
+            document.body.style.color = 'black'
+            theme = 'light'
+          }
+        })
     </script>
 </body>
 </html>
