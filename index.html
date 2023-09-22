@@ -11,11 +11,7 @@
 <body>
   <button onclick="topReach()" id="scrollToTopButton"><span class="material-symbols-outlined">arrow_upward</span></button>
     <div id="progressIndicator"></div>
-
-    <header>
-        <h1 id="header-content">Let's Code</h1>
-    </header>
-    
+    <header><h1 id="header-content">Let's Code</h1></header>
     <nav>
         <ul>
             <li><a href="#">Home</a> 🏠</li>
@@ -24,7 +20,6 @@
             <li><a href="#">Contact</a> 📲</li>
         </ul>
     </nav>
-
     <div class="content">
         <h2 style="text-align: center;">The Evolution and Impact of Computer Programming: A Comprehensive Exploration</h2>
         <br>
@@ -140,16 +135,15 @@
           
        
     </div>
-
-    <footer>
-        &copy; 2023 Let's Code
-    </footer>
     <form id="contactForm" class="contact-form">
       <input type="text"  oninvalid="this.setCustomValidity('Please Enter Your Name')" oninput="setCustomValidity('')" placeholder="Enter your name here" id="name" name="name" required />
       <input type="email"  oninvalid="this.setCustomValidity('Please Enter valid email')" oninput="setCustomValidity('')" placeholder="Enter Your email here" id="email" name="email" required/>
       <textarea id="message"  oninvalid="this.setCustomValidity('Please Enter some message to communicate easily.')" oninput="setCustomValidity('')" placeholder="Enter your message here" name="message" rows="4" required></textarea>
       <button type="submit">Submit</button>
     </form>
+    <footer>
+        &copy; 2023 Let's Code
+    </footer>
     <script src="./script.js">
     </script>
 </body>
